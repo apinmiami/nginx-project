@@ -1,0 +1,9 @@
+FROM ubuntu
+MAINTAINER apincybers@gmail.com
+RUN apt-get update
+Run apt-get install -y tzdata
+RUn apt-get install -y nginx
+RUN apt-get install -y nginx-utils
+RUN apt-get clean
+CMD ["nginxctl", "-D", "FOREGROUND"]
+
